@@ -10,5 +10,6 @@ A few pieces are missing here:
 3. Optimization
 4. Overall architecture could be improved
 5. Layout
+6. Logging
 
 But, overall, I'd say it's a good first jab at WPF.
