@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HundredPosts.Client.Interface\HundredPosts.Client.Interface.csproj" />
+    <ProjectReference Include="..\HundredPosts.Common\HundredPosts.Common.csproj" />
   </ItemGroup>
 
 </Project>

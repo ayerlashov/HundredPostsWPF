@@ -2,8 +2,10 @@
 using HundredPosts.Client.Interface;
 using HundredPosts.UI.Configs;
 using HundredPosts.UI.Services;
+using HundredPosts.UI.Services;
 using System.Windows;
 using Unity;
+using Unity.Injection;
 
 namespace HundredPosts.UI
 {

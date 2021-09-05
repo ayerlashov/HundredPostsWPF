@@ -8,13 +8,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HundredPosts.Client.Interface", "HundredPosts.Client.Interface\HundredPosts.Client.Interface.csproj", "{A8BF94D0-BA1C-4E09-9C09-A64F31150D43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HundredPosts.Client.Interface", "HundredPosts.Client.Interface\HundredPosts.Client.Interface.csproj", "{A8BF94D0-BA1C-4E09-9C09-A64F31150D43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HundredPosts.Client", "HundredPosts.Client\HundredPosts.Client.csproj", "{C9102EE8-1222-4918-9979-7EAADD621071}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HundredPosts.Client", "HundredPosts.Client\HundredPosts.Client.csproj", "{C9102EE8-1222-4918-9979-7EAADD621071}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HundredPosts.Client.Tests", "HundredPosts.Client.Tests\HundredPosts.Client.Tests.csproj", "{5F902DFF-5E4C-45D8-A3AA-9B6DC6C6F7F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HundredPosts.Client.Tests", "HundredPosts.Client.Tests\HundredPosts.Client.Tests.csproj", "{5F902DFF-5E4C-45D8-A3AA-9B6DC6C6F7F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HundredPosts.UI", "HundredPosts.UI\HundredPosts.UI.csproj", "{278835BD-CFEF-4CDB-A400-DDE89150BC8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HundredPosts.UI", "HundredPosts.UI\HundredPosts.UI.csproj", "{278835BD-CFEF-4CDB-A400-DDE89150BC8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HundredPosts.Common", "HundredPosts.Common\HundredPosts.Common.csproj", "{EF9D595B-CB0E-4694-AA81-B199D4152628}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{278835BD-CFEF-4CDB-A400-DDE89150BC8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{278835BD-CFEF-4CDB-A400-DDE89150BC8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{278835BD-CFEF-4CDB-A400-DDE89150BC8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF9D595B-CB0E-4694-AA81-B199D4152628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF9D595B-CB0E-4694-AA81-B199D4152628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF9D595B-CB0E-4694-AA81-B199D4152628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF9D595B-CB0E-4694-AA81-B199D4152628}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

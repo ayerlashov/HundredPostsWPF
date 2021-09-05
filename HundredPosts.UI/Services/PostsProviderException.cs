@@ -1,15 +1,13 @@
-﻿using HundredPosts.Client.Interface;
+﻿using HundredPosts.Common.Exceptions;
 using System;
 
 namespace HundredPosts.UI.Services
 {
-    public class PostsProviderException : Exception
+    public class PostsProviderException : FriendlyException
     {
         public PostsProviderException(Exception e)
-            : base(e.Message, e)
+            : base(e)
         {
         }
-
-        public string FriendlyMessage { get; set; }
     }
 }

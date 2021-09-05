@@ -1,5 +1,5 @@
 ﻿using HundredPosts.Client.Interface;
-using HundredPosts.UI.Model;
+using HundredPosts.UI.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

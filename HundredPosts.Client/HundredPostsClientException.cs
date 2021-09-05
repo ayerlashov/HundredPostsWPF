@@ -1,13 +1,12 @@
-﻿using System;
+﻿using HundredPosts.Common.Exceptions;
+using System;
 
 namespace HundredPosts.Client
 {
-    public class HundredPostsClientException : Exception
+    public class HundredPostsClientException : FriendlyException
     {
-        public HundredPostsClientException(Exception innerException) : base(innerException.Message, innerException)
+        public HundredPostsClientException(Exception innerException) : base(innerException)
         {
         }
-
-        public string FriendlyMessage { get; set; }
     }
 }

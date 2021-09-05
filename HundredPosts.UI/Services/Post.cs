@@ -1,4 +1,4 @@
-﻿namespace HundredPosts.UI.Model
+﻿namespace HundredPosts.UI.Services
 {
     public class Post
     {

@@ -4,35 +4,49 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:CustomElements="clr-namespace:HundredPosts.UI.CustomElements"
-        xmlns:Model="clr-namespace:HundredPosts.UI.Model"
+        xmlns:Model="clr-namespace:HundredPosts.UI.Services"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="450">
+        Title="HundredPosts" Height="550" Width="450">
 
-    <Grid>
-        <ItemsControl Grid.Row="0" Margin="10" ItemsSource="{Binding Mode=OneTime}" ButtonBase.Click="Button_Click">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate DataType="{x:Type Model:Post}">
-                    <Button Margin="2" MinHeight="35" MinWidth="35">
-                        <Button.Style>
-                            <Style TargetType="{x:Type Button}">
-                                <Setter Property="Content" Value="{Binding Id}" />
-                                <Style.Triggers>
-                                    <DataTrigger Value="True" Binding="{Binding RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}, Path=DataContext.ShowUserId}">
-                                        <Setter Property="Content" Value="{Binding UserId}" />
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-                    </Button>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+        
+            <ItemsControl Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="10" ItemsSource="{Binding Posts, Mode=OneTime}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate DataType="{x:Type Model:Post}">
+                        <Button Margin="2" MinHeight="35" MinWidth="35" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}, Path=DataContext.ToggleCommand}">
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Content" Value="{Binding Id}" />
+                                    <Style.Triggers>
+                                        <DataTrigger Value="True" Binding="{Binding RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}, Path=DataContext.ShowUserId}">
+                                            <Setter Property="Content" Value="{Binding UserId}" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
 
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <CustomElements:AutoGrid CellSizing="*" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RowCount="10" ColumnCount="10" />
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <CustomElements:AutoGrid CellSizing="*" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RowCount="10" ColumnCount="10" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
 
-        </ItemsControl>
-    </Grid>
+            </ItemsControl>
+
+            <TextBlock TextWrapping="Wrap"  Margin="10" Grid.Row="1" Grid.Column="0" Text="{Binding StatusText}"/>
+            <Button Grid.Row="1" Grid.Column="1" Margin="10" Padding ="10"  HorizontalAlignment="Right" Content="Load" Command="{Binding LoadDataCommand}"/>
+        </Grid>
+    </ScrollViewer>
 </Window>
